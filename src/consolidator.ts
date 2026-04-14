@@ -61,6 +61,11 @@ export async function consolidateRules(
         `${config.provider === 'openrouter' ? 'OpenRouter' : 'OpenAI'} API error during consolidation (401 Unauthorized). Check that your API key is set correctly and has access to the requested model.`
       );
     }
+    if (status === 404) {
+      throw new Error(
+        `${config.provider === 'openrouter' ? 'OpenRouter' : 'OpenAI'} API error during consolidation (404 Model Not Found). The model "${config.model}" is not available. Please choose a valid model ID from your provider and update DEFAULT_MODEL (or the --model flag).`
+      );
+    }
     if (status === 429) {
       throw new Error(
         `${config.provider === 'openrouter' ? 'OpenRouter' : 'OpenAI'} API error during consolidation (429 Rate Limit). You have hit the rate limit. Try again later or reduce concurrency.`
