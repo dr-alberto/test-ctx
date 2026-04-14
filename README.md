@@ -56,7 +56,7 @@ npx github:dr-alberto/test-ctx
 Set **exactly one** provider API key in your environment (or `.env`):
 
 - **OpenRouter (can be used for free models)**  
-  OpenRouter exposes multiple models, including free options like `deepseek/deepseek-r1-0528:free`, so you can try `test-ctx` **without spending money**:
+  OpenRouter exposes multiple models, including free options like `openai/gpt-oss-120b:free`, so you can try `test-ctx` **without spending money**:
   ```bash
   export OPEN_ROUTER_API_KEY=your_openrouter_key
   ```
@@ -77,7 +77,7 @@ Optionally set a default model:
 # Example defaults
 export DEFAULT_MODEL=gpt-4o-mini                            # OpenAI
 export DEFAULT_MODEL=claude-3-5-haiku-20241022              # Anthropic
-export DEFAULT_MODEL=deepseek/deepseek-r1-0528:free         # OpenRouter (free)
+export DEFAULT_MODEL=openai/gpt-oss-120b:free         # OpenRouter (free)
 ```
 
 #### 3. Running the tool

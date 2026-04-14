@@ -16,7 +16,7 @@ program
   .name('test-ctx')
   .description('Generate test-ctx.md from test files using LLM')
   .version('1.0.0')
-  .option('-m, --model <model>', 'Model name (e.g., gpt-4o-mini, claude-3-5-haiku-20241022, deepseek/deepseek-r1-0528:free). Provider is auto-detected from API keys.')
+  .option('-m, --model <model>', 'Model name (e.g., gpt-4o-mini, claude-3-5-haiku-20241022, openai/gpt-oss-120b:free). Provider is auto-detected from API keys.')
   .option('--dry-run', 'Show what files would be processed without calling API', false)
   .option('--include-code', 'Include test code snippets in LLM input', false)
   .option('--root <dir>', 'Root directory to scan', process.cwd())
